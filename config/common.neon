@@ -13,9 +13,15 @@ database:
 	password:
 
 
-latte:
-	strictTypes: yes
+extensions:
+    console: Contributte\Console\DI\ConsoleExtension(%consoleMode%)
 
+console:
+	name: Acme Project
+	version: '1.0'
+	catchExceptions: true
+	autoExit: true
+	url: https://example.com
 
 di:
 	export:

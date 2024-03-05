@@ -1,0 +1,11 @@
+<?php
+declare(strict_types=1);
+
+require __DIR__ . '/../vendor/autoload.php';
+
+const WWW_DIR = __DIR__ . '/../www';
+
+exit(App\Bootstrap::boot()
+	->createContainer()
+	->getByType(Contributte\Console\Application::class)
+	->run());
